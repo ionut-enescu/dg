@@ -23,10 +23,8 @@
     -10^9 <= nums[i] <= 10^9
  */
 
-import java.util.HashSet;
-import java.util.Set;
 
-public class Solution {
+public class Duplicates {
 
   public static void main(String args[]) {
     int[] arr = {1,5,2,5};

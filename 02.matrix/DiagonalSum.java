@@ -30,7 +30,7 @@
     1 <= mat[i][j] <= 100
  */
 
- public class Solution {
+ public class DiagonalSum {
     public static int diagonalSum(int[][] mat) {
         int totalSum = 0;  // Initialize the total sum
 

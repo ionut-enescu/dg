@@ -29,7 +29,7 @@
     1 <= nums.length <= 1000
     -10^6 <= nums[i] <= 10^6 
  */
-class Solution {
+class RunningSum1DArray {
     public static int[] runningSum(int[] nums) {
         int[] result = new int[nums.length];
         // TODO: Write your code here

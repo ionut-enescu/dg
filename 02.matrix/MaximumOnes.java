@@ -26,7 +26,7 @@
     1 <= m, n <= 100
     mat[i][j] is either 0 or 1.
  */
-public class Solution {
+public class MaximumOnes {
     public int[] findMaxOnesRow(int[][] mat) {
         int maxOnesIdx = 0;
         int maxOnesCount = 0;

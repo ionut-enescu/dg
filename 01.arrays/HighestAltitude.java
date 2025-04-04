@@ -23,7 +23,7 @@
     -100 <= gain[i] <= 100
  */
 
- public class Solution {
+ public class HighestAltitude {
     public int largestAltitude(int[] gain) {
         int maxAltitude = 0; // To store the maximum altitude encountered
         // TODO: Write your code here

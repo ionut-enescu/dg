@@ -38,7 +38,7 @@
     1 <= nums[i] <= 10^5
 */
 
-public class Solution {
+public class LeftAndRightSumDiffs {
     public int[] findDifferenceArray(int[] nums) {
         int n = nums.length;
         int[] differenceArray = new int[n];
