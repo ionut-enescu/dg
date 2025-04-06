@@ -45,3 +45,6 @@ public class MaximumOnes {
         return new int[]{maxOnesIdx, maxOnesCount};
     }
 }
+
+// Time Complexity: O(m * n), where m is the number of rows and n is the number of columns in the matrix. This is because we need to iterate through each element of the matrix to calculate the sum of ones in each row.
+// Space Complexity: O(1), as we are using a constant amount of space for variables to store the maximum count and index, regardless of the input size.

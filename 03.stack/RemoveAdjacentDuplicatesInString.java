@@ -51,3 +51,6 @@ public class RemoveAdjacentDuplicatesInString {
         return sb.reverse().toString();
     }
 }
+
+// Time Complexity: O(n) where n is the length of the string
+// Space Complexity: O(n) where n is the length of the string

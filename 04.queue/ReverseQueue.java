@@ -33,4 +33,21 @@ public class ReverseQueue {
         }
         return q;
     }
+
+    public static void main(String[] args) {
+        Queue<Integer> q = new java.util.LinkedList<>();
+        q.add(3);
+        q.add(5);
+        q.add(2);
+
+        ReverseQueue rq = new ReverseQueue();
+        Queue<Integer> reversedQueue = rq.reverseQueue(q);
+
+        while (!reversedQueue.isEmpty()) {
+            System.out.print(reversedQueue.remove() + " ");
+        }
+    }
 }
+
+// time complexity: O(n) - where n is the number of elements in the queue.
+// space complexity: O(n) - where n is the number of elements in the queue.

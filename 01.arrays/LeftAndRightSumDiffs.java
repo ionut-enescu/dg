@@ -65,4 +65,16 @@ public class LeftAndRightSumDiffs {
         }
         return differenceArray;
     }
+
+    public static void main(String[] args) {
+        LeftAndRightSumDiffs obj = new LeftAndRightSumDiffs();
+        int[] nums = {2, 5, 1, 6, 1};
+        int[] result = obj.findDifferenceArray(nums);
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
+    }
 }
+
+// Time Complexity: O(n), where n is the length of the input array nums. This is because we are iterating through the array a constant number of times (once to calculate the total sum and once to calculate the difference array).    
+// Space Complexity: O(n), where n is the length of the input array nums. This is because we are creating a new array of the same length to store the difference values.

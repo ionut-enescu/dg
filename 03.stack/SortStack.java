@@ -38,3 +38,6 @@ class SortStack {
         return tmpStack;
     }
 }
+
+// Time Complexity: O(n^2) in the worst case, where n is the number of elements in the stack. This occurs when the input stack is sorted in reverse order.
+// Space Complexity: O(n) for the temporary stack used to store the sorted elements.

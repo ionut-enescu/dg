@@ -54,4 +54,7 @@
         return maxWealth;
     }
 }
+
+// Time Complexity: O(m*n) where m is the number of customers and n is the number of banks. This is because we are iterating through each customer and their respective banks to calculate the total wealth.
+// Space Complexity: O(1) as we are using a constant amount of space to store the maximum wealth and current wealth variables.
    

@@ -48,3 +48,6 @@ public class    GenBinaryNumbers {
         return sb.reverse().toString();
     }
 }
+
+// time complexity: O(n * log n) where n is the number of elements in the queue and log n is the number of bits in the binary representation of the largest number.
+// space complexity: O(n) for the queue and the result array.

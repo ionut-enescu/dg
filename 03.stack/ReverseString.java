@@ -42,3 +42,6 @@ public class ReverseString {
         return s;
     }
 }
+
+// Time Complexity: O(n), where n is the length of the string. We are iterating through the string twice, once to push characters onto the stack and once to pop them off. 
+// Space Complexity: O(n), where n is the length of the string. We are using a stack to store all characters of the string.

@@ -80,4 +80,17 @@ class ZigZagIterator {
         
         return myQueue.size() > 1;
     }
+
+    public static void main(String[] args) {
+        List<Integer> v1 = Arrays.asList(1, 2, 3, 4);
+        List<Integer> v2 = Arrays.asList(5, 6);
+        ZigZagIterator zigZagIterator = new ZigZagIterator(v1, v2);
+        
+        while (zigZagIterator.hasNext()) {
+            System.out.print(zigZagIterator.next() + " ");
+        }
+    }
 }
+
+// Time Complexity: O(n), where n is the total number of elements in both lists.
+// Space Complexity: O(n), where n is the total number of elements in both lists.

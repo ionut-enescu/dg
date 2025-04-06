@@ -118,4 +118,16 @@ class StackWithQueue {
        }
        return true;
     }
+
+   public static void main(String[] args) {
+      StackWithQueue stack = new StackWithQueue();
+      stack.push(5);
+      stack.push(10);
+      System.out.println(stack.top()); // 10
+      System.out.println(stack.pop()); // 10
+      System.out.println(stack.empty()); // false
+   }
 }
+
+// Time Complexity: O(n) for push, O(1) for pop and top
+// Space Complexity: O(n) for the queue used to implement the stack

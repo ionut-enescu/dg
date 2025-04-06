@@ -49,3 +49,6 @@ public class Duplicates {
     return runOnce(nums, pos, nums[pos-1]);    
   }
 }
+
+// Time Complexity: O(n^2) - because of the nested loop
+// Space Complexity: O(1) - no extra space is used, only the input array is used

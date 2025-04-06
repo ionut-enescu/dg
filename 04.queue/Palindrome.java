@@ -40,6 +40,9 @@
          }
  
          return true;
-     }
- }
+    }
+}
+
+// time complexity: O(n), where n is the length of the string s. This is because we are iterating through the string once to populate the queue and stack, and then iterating through the queue once to check for palindrome.
+// space complexity: O(n), where n is the length of the string s. This is because we are using a queue and stack to store the characters of the string.
  

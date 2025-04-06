@@ -80,3 +80,7 @@ public class BalancedParantheses {
         return false;
     }
 }
+
+// Time complexity: O(n), where n is the length of the string s. We traverse the string once, and each character is pushed and popped from the stack at most once.
+// space complexity: O(n) in the worst case, when all characters are opening brackets and are stored in the stack.
+

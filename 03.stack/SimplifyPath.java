@@ -84,3 +84,6 @@ public class SimplifyPath {
         return sb.reverse().toString();
     }
 }
+
+// Time Complexity: O(n), where n is the length of the input string path. We iterate through the string once, and each character is pushed and popped from the stack at most once.
+// Space Complexity: O(n), where n is the length of the input string path. In the worst case, all characters are stored in the stack if there are no slashes or dots to simplify the path.

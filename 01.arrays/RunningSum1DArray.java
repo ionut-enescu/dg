@@ -48,3 +48,6 @@ class RunningSum1DArray {
         }
     }
 }
+
+// Time Complexity: O(n) where n is the length of the input array nums. This is because we are iterating through the array once to calculate the running sum.
+// Space Complexity: O(n) where n is the length of the input array nums. This is because we are creating a new array of the same length to store the running sum.

@@ -43,4 +43,27 @@
         
         return totalSum;  // Return the calculated total sum
     }
+
+    public static void main(String[] args) {
+        int[][] matrix1 = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+        System.out.println(diagonalSum(matrix1)); // Output: 25
+
+        int[][] matrix2 = {
+            {1, 0},
+            {0, 1}
+        };
+        System.out.println(diagonalSum(matrix2)); // Output: 2
+
+        int[][] matrix3 = {
+            {5}
+        };
+        System.out.println(diagonalSum(matrix3)); // Output: 5
+    }
 }
+
+// Time Complexity: O(n), where n is the number of rows (or columns) in the matrix. We iterate through each row once.
+// Space Complexity: O(1), as we are using a constant amount of space for the sum and indices.

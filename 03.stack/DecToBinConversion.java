@@ -53,3 +53,6 @@ public class DecToBinConversion {
         return sb.toString();
     }
 }
+
+// Time Complexity: O(log n) - The number of bits in the binary representation of n is log2(n), so the loop runs log2(n) times.
+// Space Complexity: O(log n) - The stack can hold at most log2(n) bits, which is the size of the binary representation of n.

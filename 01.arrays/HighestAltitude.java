@@ -37,4 +37,18 @@
 
         return maxAltitude;
     }
+
+    public static void main(String[] args) {
+        HighestAltitude ha = new HighestAltitude();
+        int[] gain1 = {-5, 1, 5, 0, -7};
+        int[] gain2 = {4, -3, 2, -1, -2};
+        int[] gain3 = {2, 2, -3, -1, 2, 1, -5};
+
+        System.out.println(ha.largestAltitude(gain1)); // Output: 1
+        System.out.println(ha.largestAltitude(gain2)); // Output: 4
+        System.out.println(ha.largestAltitude(gain3)); // Output: 4
+    }
 }
+
+// Time Complexity: O(n), where n is the length of the gain array. We iterate through the array once.
+// Space Complexity: O(1), as we are using a constant amount of space for variables.

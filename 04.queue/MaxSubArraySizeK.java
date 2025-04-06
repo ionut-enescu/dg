@@ -65,3 +65,6 @@ public class MaxSubArraySizeK {
         return result;
     }
 }
+
+// Time complexity: O(n) - we are iterating through the array once and using a queue to store the elements. The queue operations (add, remove, peek) are O(1) on average.
+// Space complexity: O(k) - we are using a queue to store the elements of the current subarray of size k. In the worst case, the queue will store k elements.

@@ -48,3 +48,6 @@ public class RemoveSameAdjacentCharsDiffCase {
         return sb.reverse().toString();
     }
 }
+
+// Time Complexity: O(n), where n is the length of the string. We are iterating through the string once and performing constant time operations on the stack for each character.
+// Space Complexity: O(n), in the worst case, we may need to store all characters in the stack if no adjacent characters are removed.
