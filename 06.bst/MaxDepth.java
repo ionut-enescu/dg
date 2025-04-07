@@ -53,6 +53,17 @@ public class MaxDepth {
         TreeNode(int x) { val = x; }
     }
 
+    public static void main(String[] args) {
+        MaxDepth maxDepth = new MaxDepth();
+        TreeNode root = maxDepth.new TreeNode(1);
+        root.left = maxDepth.new TreeNode(2);
+        root.right = maxDepth.new TreeNode(3);
+        root.left.left = maxDepth.new TreeNode(4);
+        root.left.right = maxDepth.new TreeNode(5);
+
+        System.out.println("Maximum Depth of the Binary Tree: " + maxDepth.maxDepth(root)); // Output: 3
+    }
+
 }
 
 // Time Complexity: O(n), where n is the number of nodes in the binary tree. We visit each node once.

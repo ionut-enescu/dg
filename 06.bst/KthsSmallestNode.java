@@ -85,7 +85,27 @@ public class  KthsSmallestNode {
         
         // Constructor to initialize the node with its value.
         TreeNode(int x) { val = x; }
-    }    
+    }
+
+    public static void main(String[] args) {
+        // Example usage:
+        KthsSmallestNode solution = new KthsSmallestNode();
+        
+        // Constructing the BST:
+        TreeNode root = solution.new TreeNode(8);
+        root.left = solution.new TreeNode(3);
+        root.right = solution.new TreeNode(10);
+        root.left.left = solution.new TreeNode(1);
+        root.left.right = solution.new TreeNode(6);
+        root.left.right.left = solution.new TreeNode(4);
+        root.left.right.right = solution.new TreeNode(7);
+        root.right.right = solution.new TreeNode(14);
+        root.right.right.left = solution.new TreeNode(13);
+
+        int k = 4;
+        int result = solution.kthSmallest(root, k);
+        System.out.println("The " + k + "th smallest element is: " + result); // Output: 6
+    }
 }
 
 // Time Complexity: O(n), where n is the number of nodes in the tree. In the worst case, we may need to traverse all nodes to find the kth smallest element.

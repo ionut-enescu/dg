@@ -78,6 +78,18 @@ public class BalancedBST {
         TreeNode right;
         TreeNode(int x) { val = x; }
     }
+
+    public static void main(String[] args) {
+        // Example usage
+        BalancedBST tree = new BalancedBST();
+        TreeNode root = tree.new TreeNode(3);
+        root.left = tree.new TreeNode(9);
+        root.right = tree.new TreeNode(20);
+        root.right.left = tree.new TreeNode(15);
+        root.right.right = tree.new TreeNode(7);
+
+        System.out.println(tree.isBalanced(root)); // Output: true
+    }
 }
 
 // Time Complexity: O(n), where n is the number of nodes in the tree. Each node is visited once.

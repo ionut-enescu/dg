@@ -81,7 +81,21 @@ public class RangeSum {
         TreeNode left;
         TreeNode right;
         TreeNode(int x) { val = x; }
-    }    
+    }
+    
+    public static void main(String[] args) {
+        // Example usage:
+        TreeNode root = new RangeSum().new TreeNode(10);
+        root.left = new RangeSum().new TreeNode(5);
+        root.right = new RangeSum().new TreeNode(15);
+        root.left.left = new RangeSum().new TreeNode(3);
+        root.left.right = new RangeSum().new TreeNode(7);
+        root.right.right = new RangeSum().new TreeNode(18);
+
+        int L = 7, R = 15;
+        int result = new RangeSum().rangeSumBST(root, L, R);
+        System.out.println("Range Sum: " + result); // Output: 32
+    }
  }
 
  // Time Complexity: O(n), where n is the number of nodes in the tree. In the worst case, we may have to visit all nodes.

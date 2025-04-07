@@ -87,6 +87,22 @@ import java.util.Iterator;
         TreeNode right;
         TreeNode(int x) { val = x; }
     }
+
+    public static void main(String[] args) {
+        // Example usage of the MinDiff class.
+        MinDiff minDiff = new MinDiff();
+        
+        // Constructing a sample BST:
+        TreeNode root = minDiff.new TreeNode(4);
+        root.left = minDiff.new TreeNode(2);
+        root.right = minDiff.new TreeNode(6);
+        root.left.left = minDiff.new TreeNode(1);
+        root.left.right = minDiff.new TreeNode(3);
+        
+        // Finding the minimum difference in the BST.
+        int result = minDiff.minDiffInBST(root);
+        System.out.println("Minimum difference: " + result); // Output: 1
+    }
  }
 
 // Time Complexity: O(n), where n is the number of nodes in the tree. We traverse each node once to build the list and then again to find the minimum difference.

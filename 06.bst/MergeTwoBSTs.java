@@ -108,6 +108,22 @@ public class MergeTwoBSTs {
         }
     }
 
+    public static void main(String[] args) {
+        MergeTwoBSTs mergeTwoBSTs = new MergeTwoBSTs();
+        
+        // Example usage
+        TreeNode t1 = mergeTwoBSTs.new TreeNode(1);
+        t1.left = mergeTwoBSTs.new TreeNode(3);
+        t1.right = mergeTwoBSTs.new TreeNode(2);
+
+        TreeNode t2 = mergeTwoBSTs.new TreeNode(1);
+        t2.left = mergeTwoBSTs.new TreeNode(2);
+        t2.right = mergeTwoBSTs.new TreeNode(3);
+
+        TreeNode mergedTree = mergeTwoBSTs.mergeTrees(t1, t2);
+        System.out.println("Merged tree root value: " + mergedTree.val); // Should print 2
+    }
+
 }
 
 // Time Complexity: O(n), where n is the number of nodes in the larger tree. This is because we need to traverse each node once to merge the trees.

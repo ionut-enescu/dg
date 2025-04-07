@@ -73,6 +73,21 @@ public class ClosestValue {
             val = x; 
         }
     }
+
+    public static void main(String[] args) {
+        ClosestValue cv = new ClosestValue();
+        TreeNode root = cv.new TreeNode(5);
+        root.left = cv.new TreeNode(3);
+        root.right = cv.new TreeNode(8);
+        root.left.left = cv.new TreeNode(1);
+        root.left.right = cv.new TreeNode(4);
+        root.right.left = cv.new TreeNode(6);
+        root.right.right = cv.new TreeNode(9);
+
+        double target = 6.4;
+        int closestValue = cv.closestValue(root, target);
+        System.out.println("Closest value to " + target + " is: " + closestValue);
+    }
 }
 
 // Time Complexity: O(h), where h is the height of the tree. In the worst case, this can be O(n) for a skewed tree. In a balanced tree, it would be O(log n).
