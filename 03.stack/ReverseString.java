@@ -1,3 +1,4 @@
+
 /**
  * Given a string, write a function that uses a stack to reverse the string. The function should return the reversed string.
 
@@ -20,7 +21,7 @@
     s[i] is a printable ascii character.
  */
 
- import java.util.Stack;
+import java.util.Stack;
 
 public class ReverseString {
     public String reverseString(String s) {
@@ -43,5 +44,8 @@ public class ReverseString {
     }
 }
 
-// Time Complexity: O(n), where n is the length of the string. We are iterating through the string twice, once to push characters onto the stack and once to pop them off. 
-// Space Complexity: O(n), where n is the length of the string. We are using a stack to store all characters of the string.
+// Time Complexity: O(n), where n is the length of the string. We are iterating
+// through the string twice, once to push characters onto the stack and once to
+// pop them off.
+// Space Complexity: O(n), where n is the length of the string. We are using a
+// stack to store all characters of the string.

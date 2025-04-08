@@ -1,3 +1,4 @@
+
 /**
  * Given an absolute file path in a Unix-style file system, simplify it by converting ".." to the previous directory and removing any "." or multiple slashes. The resulting string should represent the shortest absolute path.
 
@@ -29,7 +30,7 @@
     path is a valid absolute Unix path.
  */
 
- import java.util.*;
+import java.util.*;
 
 public class SimplifyPath {
     public String simplifyPath(String path) {
@@ -42,10 +43,10 @@ public class SimplifyPath {
                 myStack.push(c);
             } else {
                 char tmp = myStack.peek();
-                if (c == '/') {                    
+                if (c == '/') {
                     if (tmp == '.') {
                         myStack.pop();
-                    } else if ( tmp != '/') {
+                    } else if (tmp != '/') {
                         myStack.push(c);
                     }
                 } else if (c == '.') {
@@ -66,16 +67,13 @@ public class SimplifyPath {
             }
         }
 
-        
         while (myStack.peek() == '/' || myStack.peek() == '.') {
             myStack.pop();
             if (myStack.isEmpty()) {
                 myStack.push('/');
                 break;
-            } 
-        } 
-
-
+            }
+        }
 
         while (!myStack.isEmpty()) {
             sb.append(myStack.pop());
@@ -85,5 +83,9 @@ public class SimplifyPath {
     }
 }
 
-// Time Complexity: O(n), where n is the length of the input string path. We iterate through the string once, and each character is pushed and popped from the stack at most once.
-// Space Complexity: O(n), where n is the length of the input string path. In the worst case, all characters are stored in the stack if there are no slashes or dots to simplify the path.
+// Time Complexity: O(n), where n is the length of the input string path. We
+// iterate through the string once, and each character is pushed and popped from
+// the stack at most once.
+// Space Complexity: O(n), where n is the length of the input string path. In
+// the worst case, all characters are stored in the stack if there are no
+// slashes or dots to simplify the path.

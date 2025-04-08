@@ -1,3 +1,4 @@
+
 /**
  *  Given a string s containing (, ), [, ], {, and } characters. Determine if a given string of parentheses is balanced.
 
@@ -27,14 +28,14 @@
     s consists of parentheses only '()[]{}'.
  */
 
- import java.util.Stack;
+import java.util.Stack;
 
 public class BalancedParantheses {
     Stack<Character> myStack = new Stack<>();
-    
+
     public boolean isValid(String s) {
 
-        // ToDo: Write Your Code Here.        
+        // ToDo: Write Your Code Here.
         int sumAccOpen = 0;
         int sumAccClose = 0;
         int sumParOpen = 0;
@@ -47,10 +48,16 @@ public class BalancedParantheses {
                 lastChar = myStack.peek();
             }
             switch (c) {
-                case '{': sumAccOpen++; break;
-                case '[': sumBraOpen++; break;
-                case '(': sumParOpen++; break;
-                case '}': 
+                case '{':
+                    sumAccOpen++;
+                    break;
+                case '[':
+                    sumBraOpen++;
+                    break;
+                case '(':
+                    sumParOpen++;
+                    break;
+                case '}':
                     if (lastChar != 0 && (lastChar == '[' || lastChar == '(')) {
                         return false;
                     }
@@ -61,14 +68,15 @@ public class BalancedParantheses {
                         return false;
                     }
                     sumBraClose++;
-                    break;   
+                    break;
                 case ')':
                     if (lastChar != 0 && (lastChar == '[' || lastChar == '{')) {
                         return false;
                     }
                     sumParClose++;
-                    break; 
-                default: return false;       
+                    break;
+                default:
+                    return false;
             }
             myStack.push(c);
         }
@@ -81,6 +89,8 @@ public class BalancedParantheses {
     }
 }
 
-// Time complexity: O(n), where n is the length of the string s. We traverse the string once, and each character is pushed and popped from the stack at most once.
-// space complexity: O(n) in the worst case, when all characters are opening brackets and are stored in the stack.
-
+// Time complexity: O(n), where n is the length of the string s. We traverse the
+// string once, and each character is pushed and popped from the stack at most
+// once.
+// space complexity: O(n) in the worst case, when all characters are opening
+// brackets and are stored in the stack.

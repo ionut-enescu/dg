@@ -1,3 +1,4 @@
+
 /**
  * Given an integer N, generate all binary numbers from 1 to N and return them as a list of strings.
 
@@ -16,20 +17,20 @@
     Explanation: These are the binary representations of the numbers from 1 to 5.
  */
 
- import java.util.LinkedList;
+import java.util.LinkedList;
 import java.util.Queue;
 
-public class    GenBinaryNumbers {
+public class GenBinaryNumbers {
     public static String[] generateBinaryNumbers(int n) {
         String res[] = new String[n];
         Queue<String> myQueue = new LinkedList<>();
 
-        for (int i = 0; i < n ; i++) {
+        for (int i = 0; i < n; i++) {
             myQueue.add(generateBinary(i + 1));
         }
 
         for (int i = 0; i < n; i++) {
-           res[i] = myQueue.remove();
+            res[i] = myQueue.remove();
         }
 
         return res;
@@ -49,5 +50,7 @@ public class    GenBinaryNumbers {
     }
 }
 
-// time complexity: O(n * log n) where n is the number of elements in the queue and log n is the number of bits in the binary representation of the largest number.
+// time complexity: O(n * log n) where n is the number of elements in the queue
+// and log n is the number of bits in the binary representation of the largest
+// number.
 // space complexity: O(n) for the queue and the result array.

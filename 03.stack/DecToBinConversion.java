@@ -1,3 +1,4 @@
+
 /**
  * Given a positive integer n, write a function that returns its binary equivalent as a string. The function should not use any in-built binary conversion function.
 
@@ -22,7 +23,7 @@
     1 <= n <= 10^9
  */
 
- import java.util.Stack;
+import java.util.Stack;
 
 public class DecToBinConversion {
     public static String decimalToBinary(int num) {
@@ -32,7 +33,7 @@ public class DecToBinConversion {
         if (num < 2) {
             return Integer.toString(num);
         }
-        
+
         Stack<Character> myStack = new Stack<>();
 
         while (num != 1) {
@@ -54,5 +55,7 @@ public class DecToBinConversion {
     }
 }
 
-// Time Complexity: O(log n) - The number of bits in the binary representation of n is log2(n), so the loop runs log2(n) times.
-// Space Complexity: O(log n) - The stack can hold at most log2(n) bits, which is the size of the binary representation of n.
+// Time Complexity: O(log n) - The number of bits in the binary representation
+// of n is log2(n), so the loop runs log2(n) times.
+// Space Complexity: O(log n) - The stack can hold at most log2(n) bits, which
+// is the size of the binary representation of n.

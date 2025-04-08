@@ -1,3 +1,4 @@
+
 /**
  * Given the head of a singly linked list, return the head of the reversed list.
 
@@ -16,15 +17,15 @@
     Justification: The list is reversed, so the elements are in the order [1, 0, -1].
  */
 
- import java.util.Queue;
+import java.util.Queue;
 
 public class ReverseQueue {
-    
+
     public Queue<Integer> reverseQueue(Queue<Integer> q) {
-   
+
         int arr[] = new int[q.size()];
         int count = 0;
-        while(q.peek() != null) {
+        while (q.peek() != null) {
             arr[count++] = q.remove();
         }
 

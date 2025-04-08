@@ -1,3 +1,4 @@
+
 /**
  * Implement a stack using only two queues. The stack should behave like a typical last-in-first-out (LIFO) stack, meaning that the last element added should be the first one to be removed.
 
@@ -71,53 +72,53 @@
 
  */
 
- import java.util.LinkedList;
+import java.util.LinkedList;
 import java.util.Queue;
 
 class StackWithQueue {
-    Queue<Integer> stackQueue;
-    Queue<Integer> tmpQueue;
+   Queue<Integer> stackQueue;
+   Queue<Integer> tmpQueue;
 
-    public StackWithQueue() {
+   public StackWithQueue() {
       stackQueue = new LinkedList<>();
       tmpQueue = new LinkedList<>();
-    }
+   }
 
-    // Push element x onto the stack
-    public void push(int x) {
+   // Push element x onto the stack
+   public void push(int x) {
       tmpQueue.add(x);
       while (stackQueue.peek() != null) {
          tmpQueue.add(stackQueue.remove());
       }
-      
+
       while (tmpQueue.peek() != null) {
          stackQueue.add(tmpQueue.remove());
       }
       System.out.println(stackQueue.toString());
-    }
+   }
 
-    public int pop() {       
+   public int pop() {
       if (empty()) {
          return 0;
       }
 
       return stackQueue.remove();
-    }
+   }
 
-    public int top() {
+   public int top() {
       if (empty()) {
          return 0;
       }
-      
-      return stackQueue.peek();
-    }
 
-    public boolean empty() {
-       if (stackQueue.size() > 0) {
+      return stackQueue.peek();
+   }
+
+   public boolean empty() {
+      if (stackQueue.size() > 0) {
          return false;
-       }
-       return true;
-    }
+      }
+      return true;
+   }
 
    public static void main(String[] args) {
       StackWithQueue stack = new StackWithQueue();

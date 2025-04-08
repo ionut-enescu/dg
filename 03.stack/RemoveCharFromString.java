@@ -1,3 +1,4 @@
+
 /**
  * Given a string s, where * represents a star. We can remove a star along with its closest non-star character to its left in a single operation.
 
@@ -26,7 +27,7 @@
     The operation above can be performed on s.
  */
 
- import java.util.Stack;
+import java.util.Stack;
 
 public class RemoveCharFromString {
     public String removeStars(String str) {
@@ -52,5 +53,7 @@ public class RemoveCharFromString {
     }
 }
 
-// Time Complexity: O(n), where n is the length of the string. We are iterating through the string once and then popping elements from the stack.
-// Space Complexity: O(n), in the worst case, we might have to store all characters in the stack if there are no stars in the string.
+// Time Complexity: O(n), where n is the length of the string. We are iterating
+// through the string once and then popping elements from the stack.
+// Space Complexity: O(n), in the worst case, we might have to store all
+// characters in the stack if there are no stars in the string.

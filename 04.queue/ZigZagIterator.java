@@ -1,3 +1,4 @@
+
 /**
  * Given two 1d vectors, implement an iterator to return their elements alternately.
 
@@ -26,7 +27,7 @@
     -2^31 <= v1[i], v2[i] <= 2^31 - 1
  */
 
- import java.util.*;
+import java.util.*;
 
 class ZigZagIterator {
     Queue<Integer> myQueue;
@@ -35,13 +36,13 @@ class ZigZagIterator {
 
     public ZigZagIterator(List<Integer> v1, List<Integer> v2) {
         myQueue = new LinkedList<>();
-        
+
         pos = 0;
         int v1Size = v1.size();
         int v2Size = v2.size();
         int maxRuns = v1Size > v2Size ? v1Size : v2Size;
 
-        for (int i = 0; i < maxRuns; i++) { 
+        for (int i = 0; i < maxRuns; i++) {
             if (i < v1Size) {
                 myQueue.add(v1.get(i));
             }
@@ -53,7 +54,7 @@ class ZigZagIterator {
     }
 
     public int next() {
-        
+
         int returnVal = -1;
         if (pos == myQueue.size() - 1) {
             return returnVal;
@@ -61,7 +62,7 @@ class ZigZagIterator {
 
         Queue<Integer> tmpQueue = new LinkedList<>();
         int curPos = 0;
-        pos++;    
+        pos++;
 
         while (myQueue.peek() != null) {
             if (curPos++ == pos) {
@@ -70,14 +71,13 @@ class ZigZagIterator {
             tmpQueue.add(myQueue.remove());
         }
 
-        
         myQueue = tmpQueue;
 
         return returnVal;
     }
 
     public boolean hasNext() {
-        
+
         return myQueue.size() > 1;
     }
 
@@ -85,7 +85,7 @@ class ZigZagIterator {
         List<Integer> v1 = Arrays.asList(1, 2, 3, 4);
         List<Integer> v2 = Arrays.asList(5, 6);
         ZigZagIterator zigZagIterator = new ZigZagIterator(v1, v2);
-        
+
         while (zigZagIterator.hasNext()) {
             System.out.print(zigZagIterator.next() + " ");
         }
@@ -93,4 +93,5 @@ class ZigZagIterator {
 }
 
 // Time Complexity: O(n), where n is the total number of elements in both lists.
-// Space Complexity: O(n), where n is the total number of elements in both lists.
+// Space Complexity: O(n), where n is the total number of elements in both
+// lists.

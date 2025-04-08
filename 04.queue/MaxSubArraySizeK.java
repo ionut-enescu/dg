@@ -1,3 +1,4 @@
+
 /**
  * Given an integer array arr and an integer k, return the result list containing the maximum for each and every contiguous subarray of size k.
 
@@ -23,7 +24,7 @@
     1 <= k <= arr.length
  */
 
- import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -31,7 +32,7 @@ import java.util.Queue;
 public class MaxSubArraySizeK {
     public List<Integer> printMax(int[] arr, int k) {
         List<Integer> result = new ArrayList<Integer>();
-        Queue<Integer> myQueue = new LinkedList();
+        Queue<Integer> myQueue = new LinkedList<>();
 
         for (int i = 0; i < arr.length; i++) {
             myQueue.add(arr[i]);
@@ -45,20 +46,19 @@ public class MaxSubArraySizeK {
         while (myQueue.size() > 0) {
             int head = myQueue.peek();
             if (head > max) {
-                max = head;                
+                max = head;
             }
             if (cur > 1 && head > prevMaxKMinus1) {
                 System.out.println("prevMaxKMinus1: " + prevMaxKMinus1 + "; head: " + head);
                 prevMaxKMinus1 = head;
             }
 
-            if (cur >= k) {                
+            if (cur >= k) {
                 result.add(max);
                 max = head > prevMaxKMinus1 ? head : prevMaxKMinus1;
-            //    prevMaxKMinus1 = -10000;
-            } 
-            prevMaxKMinus1 = 
-            cur++;
+                // prevMaxKMinus1 = -10000;
+            }
+            prevMaxKMinus1 = cur++;
             myQueue.remove();
         }
 
@@ -66,5 +66,9 @@ public class MaxSubArraySizeK {
     }
 }
 
-// Time complexity: O(n) - we are iterating through the array once and using a queue to store the elements. The queue operations (add, remove, peek) are O(1) on average.
-// Space complexity: O(k) - we are using a queue to store the elements of the current subarray of size k. In the worst case, the queue will store k elements.
+// Time complexity: O(n) - we are iterating through the array once and using a
+// queue to store the elements. The queue operations (add, remove, peek) are
+// O(1) on average.
+// Space complexity: O(k) - we are using a queue to store the elements of the
+// current subarray of size k. In the worst case, the queue will store k
+// elements.

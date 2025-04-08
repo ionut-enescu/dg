@@ -1,3 +1,4 @@
+
 /**
  * Give a string s, convert it into a valid string. A string is considered valid if it does not have any two adjacent duplicate characters.
 
@@ -27,26 +28,25 @@
     str consists of lowercase English letters.
  */
 
- import java.util.Stack;
+import java.util.Stack;
 
 public class RemoveAdjacentDuplicatesInString {
     public String removeDuplicates(String str) {
         // ToDo: Write Your Code Here.
         Stack<Character> myStack = new Stack<>();
 
-
         for (char c : str.toCharArray()) {
             if (myStack.isEmpty() || c != myStack.peek()) {
                 myStack.push(c);
             } else {
                 myStack.pop();
-            } 
+            }
         }
 
         StringBuilder sb = new StringBuilder();
 
         while (!myStack.isEmpty()) {
-            sb.append(myStack.pop()) ;
+            sb.append(myStack.pop());
         }
         return sb.reverse().toString();
     }

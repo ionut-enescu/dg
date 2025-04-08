@@ -1,3 +1,4 @@
+
 /**
  * Given a stack, sort it using only stack operations (push and pop).
 
@@ -14,7 +15,7 @@
     Output: [-5, -1, 10, 20]
  */
 
- import java.util.*;
+import java.util.*;
 
 class SortStack {
     public static Stack<Integer> sortStack(Stack<Integer> input) {
@@ -24,7 +25,7 @@ class SortStack {
 
         while (!input.isEmpty()) {
             int inputPop = input.pop();
-            
+
             if (inputPop >= tmpStack.peek()) {
                 tmpStack.push(inputPop);
             } else {
@@ -39,5 +40,7 @@ class SortStack {
     }
 }
 
-// Time Complexity: O(n^2) in the worst case, where n is the number of elements in the stack. This occurs when the input stack is sorted in reverse order.
-// Space Complexity: O(n) for the temporary stack used to store the sorted elements.
+// Time Complexity: O(n^2) in the worst case, where n is the number of elements
+// in the stack. This occurs when the input stack is sorted in reverse order.
+// Space Complexity: O(n) for the temporary stack used to store the sorted
+// elements.

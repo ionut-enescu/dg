@@ -1,3 +1,4 @@
+
 /**
  * Given a string of English lowercase and uppercase letters, make the string "good" by removing two adjacent characters that are the same but in different cases.
 
@@ -22,7 +23,7 @@
     s contains only lower and upper case English letters.
  */
 
- import java.util.Stack;
+import java.util.Stack;
 
 public class RemoveSameAdjacentCharsDiffCase {
     public String makeGood(String str) {
@@ -31,9 +32,9 @@ public class RemoveSameAdjacentCharsDiffCase {
 
         for (char c : str.toCharArray()) {
             System.out.println(Character.getNumericValue(c));
-            if (!myStack.isEmpty() && 
-                Character.toLowerCase(c) == Character.toLowerCase(myStack.peek()) && 
-                Character.compare(c, myStack.peek()) != 0) {
+            if (!myStack.isEmpty() &&
+                    Character.toLowerCase(c) == Character.toLowerCase(myStack.peek()) &&
+                    Character.compare(c, myStack.peek()) != 0) {
                 myStack.pop();
             } else {
                 myStack.push(c);
@@ -49,5 +50,8 @@ public class RemoveSameAdjacentCharsDiffCase {
     }
 }
 
-// Time Complexity: O(n), where n is the length of the string. We are iterating through the string once and performing constant time operations on the stack for each character.
-// Space Complexity: O(n), in the worst case, we may need to store all characters in the stack if no adjacent characters are removed.
+// Time Complexity: O(n), where n is the length of the string. We are iterating
+// through the string once and performing constant time operations on the stack
+// for each character.
+// Space Complexity: O(n), in the worst case, we may need to store all
+// characters in the stack if no adjacent characters are removed.

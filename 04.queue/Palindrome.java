@@ -1,3 +1,4 @@
+
 /**
  * Given a string s, determine if that string is a palindrome using a queue data structure. Return true if the string is a palindrome. Otherwise, return false.
 
@@ -18,31 +19,33 @@
     Explanation: The phrase "A man a plan a canal Panama" reads the same forwards and backwards when we ignore spaces and capitalization.
  */
 
- import java.util.*;
+import java.util.*;
 
- public class Palindrome {
- 
-     public static boolean checkPalindrome(String s) {
-         Queue<Character> myQueue = new LinkedList<>();
-         Stack<Character> myStack = new Stack<>();
-         
-         for (char c: s.toCharArray()) {
-             if (Character.isLetterOrDigit(c)) {
-                 myQueue.add(c);
-                 myStack.push(c);
-             }
-         }
- 
-         for (int i = 0; i < myQueue.size(); i++) {
-             if (myStack.pop() !=  myQueue.remove()) {
-                 return false;
-             }
-         }
- 
-         return true;
+public class Palindrome {
+
+    public static boolean checkPalindrome(String s) {
+        Queue<Character> myQueue = new LinkedList<>();
+        Stack<Character> myStack = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
+                myQueue.add(c);
+                myStack.push(c);
+            }
+        }
+
+        for (int i = 0; i < myQueue.size(); i++) {
+            if (myStack.pop() != myQueue.remove()) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
 
-// time complexity: O(n), where n is the length of the string s. This is because we are iterating through the string once to populate the queue and stack, and then iterating through the queue once to check for palindrome.
-// space complexity: O(n), where n is the length of the string s. This is because we are using a queue and stack to store the characters of the string.
- 
+// time complexity: O(n), where n is the length of the string s. This is because
+// we are iterating through the string once to populate the queue and stack, and
+// then iterating through the queue once to check for palindrome.
+// space complexity: O(n), where n is the length of the string s. This is
+// because we are using a queue and stack to store the characters of the string.

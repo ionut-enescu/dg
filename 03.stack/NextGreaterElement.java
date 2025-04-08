@@ -1,3 +1,4 @@
+
 /**
  * Given an array, print the Next Greater Element (NGE) for every element.
 
@@ -24,7 +25,7 @@
     -10^9 <= arr[i] <= 10^9
  */
 
- import java.util.Stack;
+import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -49,13 +50,13 @@ public class NextGreaterElement {
             int cur = myStack1.pop();
 
             if (cur < curNGE) {
-                myStack2.push(curNGE); 
-            } else if (cur >= maxNGE){
+                myStack2.push(curNGE);
+            } else if (cur >= maxNGE) {
                 myStack2.push(-1);
-                maxNGE = cur;       
+                maxNGE = cur;
             } else {
                 myStack2.push(maxNGE);
-              //  maxNGE = cur;                
+                // maxNGE = cur;
             }
             System.out.println(maxNGE);
             curNGE = cur;
