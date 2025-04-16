@@ -22,11 +22,11 @@
     At most 5 * 10^4 calls will be made to insertNum and findMedian.
  */
 
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class MedianOfNumberStream {
-    PriorityQueue<Integer> myMinHeap = new PriorityQueue<>();
-    PriorityQueue<Integer> myMaxHeap = new PriorityQueue<>((x, y) -> Integer.compare(y, x));
+    Queue<Integer> myMinHeap = new PriorityQueue<>();
+    Queue<Integer> myMaxHeap = new PriorityQueue<>((x, y) -> Integer.compare(y, x));
 
     public void insertNum(int num) {
         if (myMaxHeap.isEmpty() || num <= myMaxHeap.peek()) {
